@@ -1,6 +1,4 @@
---- 
-- 
-  name: "Upgrade all packages"
-  yum: 
-    name: "*"
-    state: latest
+- name: yum remove wget
+  yum:
+    name: wget
+    state: absent
