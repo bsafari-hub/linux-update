@@ -1,0 +1,14 @@
+---
+-
+  become: "true"
+  become_user: root
+  hosts: all
+  name: "Upgrade all packages to the latest version"
+  tasks:
+    -
+      name: "Upgrade all packages to the latest version"
+      shell: "pkg update; pkg upgrade -y"
+    -
+      name: "Reboot the machine (Wait for 20 min)"
+      reboot:
+        reboot_timeout: 1200
