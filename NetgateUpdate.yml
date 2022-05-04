@@ -1,6 +1,6 @@
 ---
 -
-  become: "true"
+  become: true
   become_user: root
   hosts: all
   name: "Upgrade all packages to the latest version"
